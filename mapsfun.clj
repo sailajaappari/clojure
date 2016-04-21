@@ -12,4 +12,8 @@
 (= (assoc {:key1 "oldvalue1" :key2 "value2"} :key3 "value3" :key1 "value1") {:key1 "value1" :key2 "value2" :key3 "value3"})
 (= (dissoc {:a 1 :b 2 :c 3} :a :c) {:b 2})
 (= (merge {:a 1 :b 2} {:b 4 :c 3} {:b 6 :d 5}) {:a 1 :b 6 :c 3 :d 5})
+(def users [{:name "James" :age 29} {:name "John" :age 40}])
+(assoc-in users [1 :age] 44)
+(assoc-in users [1 :password] "abcd")
+(assoc-in users [2] {:name "Jack" :age 25})
 
