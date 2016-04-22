@@ -5,3 +5,4 @@
 (= (repeat 4 1) '(1 1 1 1))
 (= (take 5 (range 10)) '(0 1 2 3 4))
 (= (take 3 (repeat "a")) '("a" "a" "a"))
+(= (take 5 (iterate (fn [x] x) :foo)) (repeat 5 :foo))
